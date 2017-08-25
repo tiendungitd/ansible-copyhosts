@@ -1,0 +1,9 @@
+---
+- name: Copy hosts to another
+  hosts: host-group
+  remote_user: root
+
+  tasks:
+
+      - name: Copy hosts file
+        copy: src=/etc/hosts dest=/etc/ mode=0644
